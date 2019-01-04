@@ -324,7 +324,7 @@ process_file(const char *path, const char *exportPath) {
     TagLib::ByteVector vector(img_data, static_cast<unsigned int>(img_len));
 
     if (strcmp("mp3", format) == 0) {
-        audioFile = new TagLib::MPEG::File(filter_music_filename);
+        audioFile = new TagLib::MPEG::File(perfectexportPath);
 
         tag = dynamic_cast<TagLib::MPEG::File*>(audioFile)->ID3v2Tag(true);
 
@@ -335,7 +335,7 @@ process_file(const char *path, const char *exportPath) {
 
         dynamic_cast<TagLib::ID3v2::Tag*>(tag)->addFrame(frame);
     } else if (strcmp("flac", format) == 0) {
-        audioFile = new TagLib::FLAC::File(filter_music_filename);
+        audioFile = new TagLib::FLAC::File(perfectexportPath);
 
         tag = audioFile->tag();
 
@@ -349,7 +349,7 @@ process_file(const char *path, const char *exportPath) {
         printf("unknow file!\n");
         return 2;
     }
-    //
+
     tag->setTitle(TagLib::String(music_name, TagLib::String::UTF8));
     tag->setArtist(TagLib::String(artist, TagLib::String::UTF8));
     tag->setAlbum(TagLib::String(album, TagLib::String::UTF8));
