@@ -337,7 +337,7 @@ namespace TagLib {
      *
      * \see isEmpty()
      *
-     * \deprecated
+     * \
      */
      // BIC: remove
     bool isNull() const;
@@ -522,7 +522,7 @@ namespace TagLib {
      * \warning Do not modify this variable.  It will mess up the internal state
      * of TagLib.
      *
-     * \deprecated
+     * \
      */
      // BIC: remove
     static String null;
@@ -537,7 +537,7 @@ namespace TagLib {
 
   private:
     /*!
-     * \deprecated This variable is no longer used, but NEVER remove this. It
+     * \ This variable is no longer used, but NEVER remove this. It
      * may lead to a linkage error.
      */
      // BIC: remove

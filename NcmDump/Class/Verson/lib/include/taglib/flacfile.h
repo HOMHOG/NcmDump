@@ -89,7 +89,7 @@ namespace TagLib {
        *
        * \note In the current implementation, \a propertiesStyle is ignored.
        *
-       * \deprecated This constructor will be dropped in favor of the one below
+       * \ This constructor will be dropped in favor of the one below
        * in a future version.
        */
       File(FileName file, bool readProperties = true,
@@ -238,7 +238,7 @@ namespace TagLib {
        * when
        *
        * \see ID3v2FrameFactory
-       * \deprecated This value should be passed in via the constructor
+       * \ This value should be passed in via the constructor
        */
       void setID3v2FrameFactory(const ID3v2::FrameFactory *factory);
 
@@ -246,7 +246,7 @@ namespace TagLib {
        * Returns the block of data used by FLAC::Properties for parsing the
        * stream properties.
        *
-       * \deprecated Always returns an empty vector.
+       * \ Always returns an empty vector.
        */
       ByteVector streamInfoData(); // BIC: remove
 
@@ -254,7 +254,7 @@ namespace TagLib {
        * Returns the length of the audio-stream, used by FLAC::Properties for
        * calculating the bitrate.
        *
-       * \deprecated Always returns zero.
+       * \ Always returns zero.
        */
       long streamLength();  // BIC: remove
 

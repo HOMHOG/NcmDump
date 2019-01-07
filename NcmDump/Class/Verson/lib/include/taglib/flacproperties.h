@@ -70,7 +70,7 @@ namespace TagLib {
        *
        * \note This method is just an alias of lengthInSeconds().
        *
-       * \deprecated
+       * \
        */
       virtual int length() const;
 
@@ -118,7 +118,7 @@ namespace TagLib {
        *
        * \note This method is just an alias of bitsPerSample().
        *
-       * \deprecated
+       * \
        */
       int sampleWidth() const;
 

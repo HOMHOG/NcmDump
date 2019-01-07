@@ -45,8 +45,8 @@ const char *s9 = "｜";
 int
 base64_decode(uint8_t *in_str, int in_len, uint8_t *out_str) {
     BIO *b64, *bio;
-    BUF_MEM *bptr = NULL;
-    int counts;
+//    BUF_MEM *bptr = NULL;
+//    int counts;
     int size = 0;
     
     if (in_str == NULL || out_str == NULL)
@@ -166,7 +166,7 @@ process_file(const char *path, const char *exportPath) {
     }
     
     // offset header 22
-    size_t data_len;
+    int data_len;
     uint8_t data[ulen];
     uint8_t dedata[ulen];
     cJSON *json_swap;
@@ -206,8 +206,9 @@ process_file(const char *path, const char *exportPath) {
     
     artist[artist_concat - 2] = 0;
     
-    int   bitrate  = cJSON_GetObjectItem(music_info, "bitrate")->valueint;
-    int   duration = cJSON_GetObjectItem(music_info, "duration")->valueint;
+//    int bitrate  = cJSON_GetObjectItem(music_info, "bitrate")->valueint;
+//    int duration = cJSON_GetObjectItem(music_info, "duration")->valueint;
+    
     char *format   = cJSON_GetStringValue(cJSON_GetObjectItem(music_info, "format"));
     
     char music_filename[1024];

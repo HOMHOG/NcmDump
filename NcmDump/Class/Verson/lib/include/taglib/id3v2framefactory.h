@@ -71,7 +71,7 @@ namespace TagLib {
        * false if we are parsing an old tag (v2.3 or older) that does not support
        * synchsafe ints.
        *
-       * \deprecated Please use the method below that accepts a ID3v2::Header
+       * \ Please use the method below that accepts a ID3v2::Header
        * instance in new code.
        */
       Frame *createFrame(const ByteVector &data, bool synchSafeInts) const;
@@ -81,7 +81,7 @@ namespace TagLib {
        * version of the tag.  As ID3v2.4 is the most current version of the
        * standard 4 is the default.
        *
-       * \deprecated Please use the method below that accepts a ID3v2::Header
+       * \ Please use the method below that accepts a ID3v2::Header
        * instance in new code.
        */
       Frame *createFrame(const ByteVector &data, unsigned int version = 4) const;

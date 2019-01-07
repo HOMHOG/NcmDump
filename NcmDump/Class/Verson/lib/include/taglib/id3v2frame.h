@@ -84,7 +84,7 @@ namespace TagLib {
       /*!
        * Returns the size of the frame header
        *
-       * \deprecated This is only accurate for ID3v2.3 or ID3v2.4.  Please use
+       * \ This is only accurate for ID3v2.3 or ID3v2.4.  Please use
        * the call below which accepts an ID3v2 version number.  In the next
        * non-binary compatible release this will be made into a non-static
        * member that checks the internal ID3v2 version.
@@ -94,7 +94,7 @@ namespace TagLib {
       /*!
        * Returns the size of the frame header for the given ID3v2 version.
        *
-       * \deprecated Please see the explanation above.
+       * \ Please see the explanation above.
        */
       static unsigned int headerSize(unsigned int version); // BIC: remove and make non-static
 
@@ -331,7 +331,7 @@ namespace TagLib {
        * contain a 4 byte frame ID, and optionally can contain flag data and the
        * frame size.  i.e. Just the frame id -- "TALB" -- is a valid value.
        *
-       * \deprecated Please use the constructor below that accepts a version
+       * \ Please use the constructor below that accepts a version
        * number.
        */
       Header(const ByteVector &data, bool synchSafeInts);
@@ -353,7 +353,7 @@ namespace TagLib {
       /*!
        * Sets the data for the Header.
        *
-       * \deprecated Please use the version below that accepts an ID3v2 version
+       * \ Please use the version below that accepts an ID3v2 version
        * number.
        */
       void setData(const ByteVector &data, bool synchSafeInts);
@@ -406,7 +406,7 @@ namespace TagLib {
       /*!
        * Returns the size of the frame header in bytes.
        *
-       * \deprecated Please use the version of this method that accepts a
+       * \ Please use the version of this method that accepts a
        * version.  This is only accurate for ID3v2.3 and ID3v2.4.  This will be
        * removed in the next binary incompatible release (2.0) and will be
        * replaced with a non-static method that checks the frame version.
@@ -417,7 +417,7 @@ namespace TagLib {
        * Returns the size of the frame header in bytes for the ID3v2 version
        * that's given.
        *
-       * \deprecated Please see the explanation in the version above.
+       * \ Please see the explanation in the version above.
        */
       static unsigned int size(unsigned int version);
 
@@ -500,7 +500,7 @@ namespace TagLib {
       ByteVector render() const;
 
       /*!
-       * \deprecated
+       * \
        */
       bool frameAlterPreservation() const;
 

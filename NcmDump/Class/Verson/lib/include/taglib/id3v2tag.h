@@ -196,7 +196,7 @@ namespace TagLib {
       /*!
        * Returns a pointer to the tag's footer or null if there is no footer.
        *
-       * \deprecated I don't see any reason to keep this around since there's
+       * \ I don't see any reason to keep this around since there's
        * nothing useful to be retrieved from the footer, but well, again, I'm
        * prone to change my mind, so this gets to stay around until near a
        * release.

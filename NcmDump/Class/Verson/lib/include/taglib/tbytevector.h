@@ -278,7 +278,7 @@ namespace TagLib {
      *
      * \see isEmpty()
      *
-     * \deprecated
+     * \
      */
      // BIC: remove
     bool isNull() const;
@@ -592,7 +592,7 @@ namespace TagLib {
      * \warning Do not modify this variable.  It will mess up the internal state
      * of TagLib.
      *
-     * \deprecated
+     * \
      */
     // BIC: remove
     static ByteVector null;

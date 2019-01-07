@@ -76,7 +76,7 @@ namespace TagLib {
        *
        * \note In the current implementation, \a propertiesStyle is ignored.
        *
-       * \deprecated This constructor will be dropped in favor of the one below
+       * \ This constructor will be dropped in favor of the one below
        * in a future version.
        */
       File(FileName file, bool readProperties = true,
@@ -323,7 +323,7 @@ namespace TagLib {
        * Set the ID3v2::FrameFactory to something other than the default.
        *
        * \see ID3v2FrameFactory
-       * \deprecated This value should be passed in via the constructor
+       * \ This value should be passed in via the constructor
        */
       void setID3v2FrameFactory(const ID3v2::FrameFactory *factory);
 
