@@ -17,13 +17,14 @@
 #include <openssl/bio.h>
 #include <openssl/evp.h>
 
-//#include <taglib/mpegfile.h>
-//#include <taglib/flacfile.h>
-//#include <taglib/attachedpictureframe.h>
-//#include <taglib/id3v2tag.h>
-//#include <taglib/tag.h>
-
 #include "cJSON.h"
+
+#include "mpegfile.h"
+#include "flacfile.h"
+#include "attachedpictureframe.h"
+#include "id3v2tag.h"
+#include "tag.h"
+
 
 
 
@@ -319,44 +320,44 @@ process_file(const char *path, const char *exportPath) {
     free(box);
     fclose(f);
     
-//    TagLib::File *audioFile;
-//    TagLib::Tag *tag;
-//
-//    TagLib::ByteVector vector(img_data, static_cast<unsigned int>(img_len));
-//
-//    if (strcmp("mp3", format) == 0) {
-//        audioFile = new TagLib::MPEG::File(perfectexportPath);
-//
-//        tag = dynamic_cast<TagLib::MPEG::File*>(audioFile)->ID3v2Tag(true);
-//
-//        TagLib::ID3v2::AttachedPictureFrame *frame = new TagLib::ID3v2::AttachedPictureFrame;
-//
-//        frame->setMimeType("image/jpeg");
-//        frame->setPicture(vector);
-//
-//        dynamic_cast<TagLib::ID3v2::Tag*>(tag)->addFrame(frame);
-//    } else if (strcmp("flac", format) == 0) {
-//        audioFile = new TagLib::FLAC::File(perfectexportPath);
-//
-//        tag = audioFile->tag();
-//
-//        TagLib::FLAC::Picture *cover = new TagLib::FLAC::Picture;
-//        cover->setMimeType("image/jpeg");
-//        cover->setType(TagLib::FLAC::Picture::FrontCover);
-//        cover->setData(vector);
-//
-//        dynamic_cast<TagLib::FLAC::File*>(audioFile)->addPicture(cover);
-//    } else {
-//        printf("unknow file!\n");
-//        return 2;
-//    }
-//
-//    tag->setTitle(TagLib::String(music_name, TagLib::String::UTF8));
-//    tag->setArtist(TagLib::String(artist, TagLib::String::UTF8));
-//    tag->setAlbum(TagLib::String(album, TagLib::String::UTF8));
-//    tag->setComment(TagLib::String("Create by netease copyright protected dump tool. author 5L", TagLib::String::UTF8));
-//
-//    audioFile->save();
+    TagLib::File *audioFile;
+    TagLib::Tag *tag;
+
+    TagLib::ByteVector vector(img_data, static_cast<unsigned int>(img_len));
+
+    if (strcmp("mp3", format) == 0) {
+        audioFile = new TagLib::MPEG::File(perfectexportPath);
+
+        tag = dynamic_cast<TagLib::MPEG::File*>(audioFile)->ID3v2Tag(true);
+
+        TagLib::ID3v2::AttachedPictureFrame *frame = new TagLib::ID3v2::AttachedPictureFrame;
+
+        frame->setMimeType("image/jpeg");
+        frame->setPicture(vector);
+
+        dynamic_cast<TagLib::ID3v2::Tag*>(tag)->addFrame(frame);
+    } else if (strcmp("flac", format) == 0) {
+        audioFile = new TagLib::FLAC::File(perfectexportPath);
+
+        tag = audioFile->tag();
+
+        TagLib::FLAC::Picture *cover = new TagLib::FLAC::Picture;
+        cover->setMimeType("image/jpeg");
+        cover->setType(TagLib::FLAC::Picture::FrontCover);
+        cover->setData(vector);
+
+        dynamic_cast<TagLib::FLAC::File*>(audioFile)->addPicture(cover);
+    } else {
+        printf("unknow file!\n");
+        return 2;
+    }
+
+    tag->setTitle(TagLib::String(music_name, TagLib::String::UTF8));
+    tag->setArtist(TagLib::String(artist, TagLib::String::UTF8));
+    tag->setAlbum(TagLib::String(album, TagLib::String::UTF8));
+    tag->setComment(TagLib::String("Create by netease copyright protected dump tool. author 5L", TagLib::String::UTF8));
+
+    audioFile->save();
     
     cJSON_Delete(music_info);
     
