@@ -11,8 +11,8 @@
 		05080A0921DDE35500A32565 /* NSDate+MMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 05080A0821DDE35500A32565 /* NSDate+MMCommon.m */; };
 		0520E54F21F0119D009171F4 /* libtag.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0520E54E21F0119D009171F4 /* libtag.1.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		056B5A6F21EEC284009C17D0 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 056B5A6E21EEC284009C17D0 /* libc++.1.tbd */; };
-		057F94F721DE0BC600F7C59D /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057F943721DE0BC600F7C59D /* libcrypto.a */; };
-		057F94FB21DE0BC600F7C59D /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057F94F521DE0BC600F7C59D /* libssl.a */; };
+		057F94F721DE0BC600F7C59D /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057F943721DE0BC600F7C59D /* libcrypto.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		057F94FB21DE0BC600F7C59D /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057F94F521DE0BC600F7C59D /* libssl.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		05A2B78421DE02DE00C03DB7 /* JRNcmDumpTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05A2B78321DE02DE00C03DB7 /* JRNcmDumpTool.mm */; };
 		05E8EC3E21DE0C2E00BCD51C /* include in Resources */ = {isa = PBXBuildFile; fileRef = 05E8EC3D21DE0C2E00BCD51C /* include */; };
 		05E8EC4021DE0FCB00BCD51C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E8EC3F21DE0FCB00BCD51C /* libc++.tbd */; };
@@ -69,9 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E8EC4021DE0FCB00BCD51C /* libc++.tbd in Frameworks */,
 				056B5A6F21EEC284009C17D0 /* libc++.1.tbd in Frameworks */,
 				0520E54F21F0119D009171F4 /* libtag.1.dylib in Frameworks */,
-				05E8EC4021DE0FCB00BCD51C /* libc++.tbd in Frameworks */,
 				057F94F721DE0BC600F7C59D /* libcrypto.a in Frameworks */,
 				057F94FB21DE0BC600F7C59D /* libssl.a in Frameworks */,
 			);
