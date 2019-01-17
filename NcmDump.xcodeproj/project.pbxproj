@@ -455,7 +455,7 @@
 		05A5A7FE21F0625200B7CB1E /* modfilebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modfilebase.h; sourceTree = "<group>"; };
 		05DDE54D21F05F4400FD9DE5 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
 		05E8EC3F21DE0FCB00BCD51C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		05FAEAC021DDBDFE00309829 /* NcmDump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NcmDump.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05FAEAC021DDBDFE00309829 /* djrConvert ncm file.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "djrConvert ncm file.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FAEAC321DDBDFE00309829 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		05FAEAC421DDBDFE00309829 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		05FAEAC621DDBDFE00309829 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -1066,7 +1066,7 @@
 		05FAEAC121DDBDFE00309829 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05FAEAC021DDBDFE00309829 /* NcmDump.app */,
+				05FAEAC021DDBDFE00309829 /* djrConvert ncm file.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1125,7 +1125,7 @@
 			);
 			name = NcmDump;
 			productName = NcmDump;
-			productReference = 05FAEAC021DDBDFE00309829 /* NcmDump.app */;
+			productReference = 05FAEAC021DDBDFE00309829 /* djrConvert ncm file.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1448,7 +1448,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = Miracle.NcmDump;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "djrConvert ncm file";
 			};
 			name = Debug;
 		};
@@ -1473,7 +1473,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = Miracle.NcmDump;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "djrConvert ncm file";
 			};
 			name = Release;
 		};
