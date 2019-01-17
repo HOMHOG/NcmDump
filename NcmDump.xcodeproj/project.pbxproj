@@ -1434,7 +1434,7 @@
 				CODE_SIGN_ENTITLEMENTS = NcmDump/NcmDump.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3VDRUN62M8;
+				DEVELOPMENT_TEAM = 575VY4WYAM;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/NcmDump/Class/Verson/OpenSSL";
 				INFOPLIST_FILE = NcmDump/Info.plist;
@@ -1459,7 +1459,7 @@
 				CODE_SIGN_ENTITLEMENTS = NcmDump/NcmDump.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3VDRUN62M8;
+				DEVELOPMENT_TEAM = 575VY4WYAM;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/NcmDump/Class/Verson/OpenSSL";
 				INFOPLIST_FILE = NcmDump/Info.plist;
