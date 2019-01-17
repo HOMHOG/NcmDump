@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		05080A0521DDE31C00A32565 /* MMFileUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 05080A0221DDE31C00A32565 /* MMFileUtility.m */; };
 		05080A0921DDE35500A32565 /* NSDate+MMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 05080A0821DDE35500A32565 /* NSDate+MMCommon.m */; };
+		0520E54F21F0119D009171F4 /* libtag.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0520E54E21F0119D009171F4 /* libtag.1.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		056B5A6F21EEC284009C17D0 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 056B5A6E21EEC284009C17D0 /* libc++.1.tbd */; };
 		057F94F721DE0BC600F7C59D /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057F943721DE0BC600F7C59D /* libcrypto.a */; };
 		057F94FB21DE0BC600F7C59D /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057F94F521DE0BC600F7C59D /* libssl.a */; };
-		057F94FC21DE0BC600F7C59D /* libtag.1.17.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 057F94F621DE0BC600F7C59D /* libtag.1.17.0.dylib */; };
 		05A2B78421DE02DE00C03DB7 /* JRNcmDumpTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05A2B78321DE02DE00C03DB7 /* JRNcmDumpTool.mm */; };
 		05E8EC3E21DE0C2E00BCD51C /* include in Resources */ = {isa = PBXBuildFile; fileRef = 05E8EC3D21DE0C2E00BCD51C /* include */; };
 		05E8EC4021DE0FCB00BCD51C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E8EC3F21DE0FCB00BCD51C /* libc++.tbd */; };
@@ -41,9 +42,10 @@
 		05080A0321DDE31C00A32565 /* MMFileUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFileUtility.h; sourceTree = "<group>"; };
 		05080A0721DDE35500A32565 /* NSDate+MMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MMCommon.h"; sourceTree = "<group>"; };
 		05080A0821DDE35500A32565 /* NSDate+MMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MMCommon.m"; sourceTree = "<group>"; };
+		0520E54E21F0119D009171F4 /* libtag.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtag.1.dylib; sourceTree = "<group>"; };
+		056B5A6E21EEC284009C17D0 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		057F943721DE0BC600F7C59D /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		057F94F521DE0BC600F7C59D /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		057F94F621DE0BC600F7C59D /* libtag.1.17.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtag.1.17.0.dylib; sourceTree = "<group>"; };
 		05A2B78221DE02DE00C03DB7 /* JRNcmDumpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRNcmDumpTool.h; sourceTree = "<group>"; };
 		05A2B78321DE02DE00C03DB7 /* JRNcmDumpTool.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = JRNcmDumpTool.mm; sourceTree = "<group>"; };
 		05E8EC3D21DE0C2E00BCD51C /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
@@ -67,10 +69,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056B5A6F21EEC284009C17D0 /* libc++.1.tbd in Frameworks */,
+				0520E54F21F0119D009171F4 /* libtag.1.dylib in Frameworks */,
 				05E8EC4021DE0FCB00BCD51C /* libc++.tbd in Frameworks */,
 				057F94F721DE0BC600F7C59D /* libcrypto.a in Frameworks */,
 				057F94FB21DE0BC600F7C59D /* libssl.a in Frameworks */,
-				057F94FC21DE0BC600F7C59D /* libtag.1.17.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +111,7 @@
 		053E836121DDEB4E00FB7B59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				056B5A6E21EEC284009C17D0 /* libc++.1.tbd */,
 				05E8EC3F21DE0FCB00BCD51C /* libc++.tbd */,
 			);
 			name = Frameworks;
@@ -119,7 +123,7 @@
 				05E8EC3D21DE0C2E00BCD51C /* include */,
 				057F943721DE0BC600F7C59D /* libcrypto.a */,
 				057F94F521DE0BC600F7C59D /* libssl.a */,
-				057F94F621DE0BC600F7C59D /* libtag.1.17.0.dylib */,
+				0520E54E21F0119D009171F4 /* libtag.1.dylib */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -407,6 +411,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NcmDump/Class/Verson/lib",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = Miracle.NcmDump;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -430,6 +435,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NcmDump/Class/Verson/lib",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = Miracle.NcmDump;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
