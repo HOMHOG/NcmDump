@@ -25,8 +25,7 @@
 #include "id3v2tag.h"
 #include "tag.h"
 
-
-
+#include "ncmcrypt.h"
 
 @implementation JRNcmDumpTool
 
@@ -368,7 +367,11 @@ process_file(const char *path, const char *exportPath) {
 {
     exportPath = [exportPath stringByAppendingString:@"/"];
     for (NSString *path in ncmFiles) {
-        process_file([path cStringUsingEncoding:NSUTF8StringEncoding], [exportPath cStringUsingEncoding:NSUTF8StringEncoding]);
+        NeteaseCrypt crypt([path cStringUsingEncoding:NSUTF8StringEncoding], [exportPath cStringUsingEncoding:NSUTF8StringEncoding]);
+        crypt.Dump();
+        crypt.FixMetadata();
+//        crypt.dumpFilepath()
+        std::cout << crypt.dumpFilepath() << std::endl;
     }
 }
 

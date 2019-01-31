@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		05080A0521DDE31C00A32565 /* MMFileUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 05080A0221DDE31C00A32565 /* MMFileUtility.m */; };
 		05080A0921DDE35500A32565 /* NSDate+MMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 05080A0821DDE35500A32565 /* NSDate+MMCommon.m */; };
+		053D82BD2202F45F00DE4FF4 /* ncmcrypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053D82BB2202F45E00DE4FF4 /* ncmcrypt.cpp */; };
+		053D82BE2202F45F00DE4FF4 /* aes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053D82BC2202F45E00DE4FF4 /* aes.cpp */; };
 		0542EAC521F02B1900A160AC /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0542EA7721F02B1900A160AC /* libcrypto.a */; };
 		0542EAC621F02B1900A160AC /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0542EA7821F02B1900A160AC /* libssl.a */; };
 		0542EACB21F02BCA00A160AC /* JRNcmDumpTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0542EACA21F02BCA00A160AC /* JRNcmDumpTool.mm */; };
@@ -151,6 +153,11 @@
 		05080A0321DDE31C00A32565 /* MMFileUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFileUtility.h; sourceTree = "<group>"; };
 		05080A0721DDE35500A32565 /* NSDate+MMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MMCommon.h"; sourceTree = "<group>"; };
 		05080A0821DDE35500A32565 /* NSDate+MMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MMCommon.m"; sourceTree = "<group>"; };
+		053D82B82202F45E00DE4FF4 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		053D82B92202F45E00DE4FF4 /* ncmcrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ncmcrypt.h; sourceTree = "<group>"; };
+		053D82BA2202F45E00DE4FF4 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		053D82BB2202F45E00DE4FF4 /* ncmcrypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ncmcrypt.cpp; sourceTree = "<group>"; };
+		053D82BC2202F45E00DE4FF4 /* aes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aes.cpp; sourceTree = "<group>"; };
 		0542EA7721F02B1900A160AC /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		0542EA7821F02B1900A160AC /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		0542EA7A21F02B1900A160AC /* pem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
@@ -512,6 +519,18 @@
 				05080A0821DDE35500A32565 /* NSDate+MMCommon.m */,
 			);
 			path = NSDate;
+			sourceTree = "<group>";
+		};
+		053D82B72202F45E00DE4FF4 /* ncmcrypt */ = {
+			isa = PBXGroup;
+			children = (
+				053D82B82202F45E00DE4FF4 /* base64.h */,
+				053D82B92202F45E00DE4FF4 /* ncmcrypt.h */,
+				053D82BA2202F45E00DE4FF4 /* aes.h */,
+				053D82BB2202F45E00DE4FF4 /* ncmcrypt.cpp */,
+				053D82BC2202F45E00DE4FF4 /* aes.cpp */,
+			);
+			path = ncmcrypt;
 			sourceTree = "<group>";
 		};
 		053E836121DDEB4E00FB7B59 /* Frameworks */ = {
@@ -1091,6 +1110,7 @@
 		05FE20C621DE04E500D8BC9F /* Verson */ = {
 			isa = PBXGroup;
 			children = (
+				053D82B72202F45E00DE4FF4 /* ncmcrypt */,
 				05A5A70621F0625200B7CB1E /* taglib */,
 				0542EA7621F02B1900A160AC /* OpenSSL */,
 				05FE211921DE058400D8BC9F /* cJSON */,
@@ -1238,6 +1258,7 @@
 				05A5A84B21F0625300B7CB1E /* tagutils.cpp in Sources */,
 				05A5A80021F0625300B7CB1E /* wavpackproperties.cpp in Sources */,
 				05A5A80A21F0625300B7CB1E /* speexproperties.cpp in Sources */,
+				053D82BE2202F45F00DE4FF4 /* aes.cpp in Sources */,
 				05FAEAD021DDBE0000309829 /* main.m in Sources */,
 				05A5A80421F0625300B7CB1E /* oggfile.cpp in Sources */,
 				05A5A86521F0625300B7CB1E /* tiostream.cpp in Sources */,
@@ -1263,6 +1284,7 @@
 				05A5A85221F0625300B7CB1E /* mp4properties.cpp in Sources */,
 				05A5A82521F0625300B7CB1E /* commentsframe.cpp in Sources */,
 				05A5A81421F0625300B7CB1E /* apefooter.cpp in Sources */,
+				053D82BD2202F45F00DE4FF4 /* ncmcrypt.cpp in Sources */,
 				05A5A85321F0625300B7CB1E /* asfpicture.cpp in Sources */,
 				05A5A85721F0625300B7CB1E /* asffile.cpp in Sources */,
 				05FE211C21DE058400D8BC9F /* cJSON.cpp in Sources */,
