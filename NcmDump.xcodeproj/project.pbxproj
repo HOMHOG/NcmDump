@@ -1468,7 +1468,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NcmDump/Class/Verson/OpenSSL",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = Miracle.NcmDump;
 				PRODUCT_NAME = "djrConvert ncm file";
 			};
@@ -1493,7 +1493,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NcmDump/Class/Verson/OpenSSL",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = Miracle.NcmDump;
 				PRODUCT_NAME = "djrConvert ncm file";
 			};
