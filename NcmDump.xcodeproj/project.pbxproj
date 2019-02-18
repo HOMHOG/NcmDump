@@ -15,6 +15,7 @@
 		0542EAC621F02B1900A160AC /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0542EA7821F02B1900A160AC /* libssl.a */; };
 		0542EACB21F02BCA00A160AC /* JRNcmDumpTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0542EACA21F02BCA00A160AC /* JRNcmDumpTool.mm */; };
 		056B5A6F21EEC284009C17D0 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 056B5A6E21EEC284009C17D0 /* libc++.1.tbd */; };
+		0582C770221A7C9800323955 /* JRSavePathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0582C76F221A7C9800323955 /* JRSavePathTool.m */; };
 		05A5A7FF21F0625300B7CB1E /* wavpackfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05A5A70A21F0625200B7CB1E /* wavpackfile.cpp */; };
 		05A5A80021F0625300B7CB1E /* wavpackproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05A5A70B21F0625200B7CB1E /* wavpackproperties.cpp */; };
 		05A5A80121F0625300B7CB1E /* s3mproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05A5A70F21F0625200B7CB1E /* s3mproperties.cpp */; };
@@ -238,6 +239,8 @@
 		0542EAC921F02BCA00A160AC /* JRNcmDumpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRNcmDumpTool.h; sourceTree = "<group>"; };
 		0542EACA21F02BCA00A160AC /* JRNcmDumpTool.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JRNcmDumpTool.mm; sourceTree = "<group>"; };
 		056B5A6E21EEC284009C17D0 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		0582C76E221A7C9800323955 /* JRSavePathTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRSavePathTool.h; sourceTree = "<group>"; };
+		0582C76F221A7C9800323955 /* JRSavePathTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRSavePathTool.m; sourceTree = "<group>"; };
 		05A5A70821F0625200B7CB1E /* wavpackproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavpackproperties.h; sourceTree = "<group>"; };
 		05A5A70921F0625200B7CB1E /* wavpackfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavpackfile.h; sourceTree = "<group>"; };
 		05A5A70A21F0625200B7CB1E /* wavpackfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavpackfile.cpp; sourceTree = "<group>"; };
@@ -495,6 +498,7 @@
 		050809FC21DDD7FF00A32565 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				0510DD83221A628F00298A42 /* Save */,
 				0542EAC721F02BCA00A160AC /* Core */,
 				05FE20C621DE04E500D8BC9F /* Verson */,
 				05080A0621DDE35500A32565 /* NSDate */,
@@ -519,6 +523,15 @@
 				05080A0821DDE35500A32565 /* NSDate+MMCommon.m */,
 			);
 			path = NSDate;
+			sourceTree = "<group>";
+		};
+		0510DD83221A628F00298A42 /* Save */ = {
+			isa = PBXGroup;
+			children = (
+				0582C76E221A7C9800323955 /* JRSavePathTool.h */,
+				0582C76F221A7C9800323955 /* JRSavePathTool.m */,
+			);
+			path = Save;
 			sourceTree = "<group>";
 		};
 		053D82B72202F45E00DE4FF4 /* ncmcrypt */ = {
@@ -1288,6 +1301,7 @@
 				05A5A85321F0625300B7CB1E /* asfpicture.cpp in Sources */,
 				05A5A85721F0625300B7CB1E /* asffile.cpp in Sources */,
 				05FE211C21DE058400D8BC9F /* cJSON.cpp in Sources */,
+				0582C770221A7C9800323955 /* JRSavePathTool.m in Sources */,
 				05A5A83F21F0625300B7CB1E /* rifffile.cpp in Sources */,
 				05A5A80F21F0625300B7CB1E /* trueaudioproperties.cpp in Sources */,
 				05A5A82B21F0625300B7CB1E /* attachedpictureframe.cpp in Sources */,

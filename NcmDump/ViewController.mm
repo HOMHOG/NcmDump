@@ -9,10 +9,10 @@
 #import "ViewController.h"
 #import "MMFileUtility.h"
 #import "JRNcmDumpTool.h"
+#import "JRSavePathTool.h"
 
 NSString *const jr_pathExtension = @"ncm";
 
-NSString *const jr_dumpPathName = @"NcmDump";
 
 @interface ViewController ()
 
@@ -21,6 +21,9 @@ NSString *const jr_dumpPathName = @"NcmDump";
 @property (copy, nonatomic) NSString *exportPath;
 @property (weak) IBOutlet NSTextField *ncmPathLab;
 @property (weak) IBOutlet NSTextField *exportPathLab;
+@property (weak) IBOutlet NSButton *numFilePathBtn;
+@property (weak) IBOutlet NSButton *exportPathBtn;
+
 
 @end
 
@@ -28,16 +31,29 @@ NSString *const jr_dumpPathName = @"NcmDump";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 
+    self.numFilePathBtn.state = [JRSavePathTool share].saveNcmFilePath;
+    self.exportPathBtn.state = [JRSavePathTool share].saveExportPath;
+    
     // Do any additional setup after loading the view.
     _files = @[].mutableCopy;
     
-    NSString *desktopPath = [NSSearchPathForDirectoriesInDomains(NSMusicDirectory, NSUserDomainMask, YES)objectAtIndex:0];
-    _exportPath = [desktopPath stringByAppendingPathComponent:jr_dumpPathName];
-    if (![MMFileUtility directoryExist:_exportPath]) {
-        [MMFileUtility createFolder:_exportPath errStr:nil];
+    
+    NSString *ncmFilePath = [JRSavePathTool share].ncmFilePath;
+    if (ncmFilePath.length == 0) {
+        ncmFilePath = @"请选择ncm文件路径(当多选文件夹的时候，只会保存第一个路径)";
+    } else {
+        [_files addObject:ncmFilePath];
     }
-    _exportPathLab.stringValue = _exportPath;
+    _ncmPathLab.stringValue = ncmFilePath;
+    
+    _exportPath = [JRSavePathTool share].exportPath;
+    if (_exportPath.length == 0) {
+        _exportPathLab.stringValue = @"请选择转换文件路径";
+        } else {
+        _exportPathLab.stringValue = _exportPath;
+    }
 }
 
 
@@ -48,6 +64,7 @@ NSString *const jr_dumpPathName = @"NcmDump";
 }
 
 - (IBAction)selectMusicPathButtonAction:(id)sender {
+    [_files removeAllObjects];
     NSOpenPanel *openPanel = [NSOpenPanel openPanel];
     [openPanel setAllowsMultipleSelection:NO];
     [openPanel setCanChooseDirectories:YES];
@@ -71,7 +88,8 @@ NSString *const jr_dumpPathName = @"NcmDump";
                     }
                 }
             }
-//            NSLog(@"%@", weakSelf.files);
+            self.ncmPathLab.stringValue = [self.files firstObject];
+            [JRSavePathTool share].ncmFilePath = [self.files firstObject];
         }
     }];
 }
@@ -92,24 +110,47 @@ NSString *const jr_dumpPathName = @"NcmDump";
                 [MMFileUtility createFolder:path errStr:nil];
             }
             weakSelf.exportPath = path;
-            weakSelf.exportPathLab.stringValue = weakSelf.exportPath;
+            weakSelf.exportPathLab.stringValue = path;
+            [JRSavePathTool share].exportPath = path;
         }
     }];
 
 }
 
 - (IBAction)startNcmDumpButtonAction:(id)sender {
-    if (_files.count == 0) {
+    BOOL isError = NO;
+    NSString *errorStr = @"ncm";
+    if (self.files.count == 0) {
+        isError = YES;
+    }
+    if (self.exportPath.length == 0) {
+        if (isError) {
+            errorStr = [errorStr stringByAppendingString:@"和exprot"];
+        } else {
+            errorStr = @"export";
+        }
+        isError = YES;
+    }
+    
+    if (isError) {
         NSAlert *alert = [[NSAlert alloc] init];
-        
-        alert.messageText = @"请选择ncm文件路径";
-        alert.informativeText = @"可以是文件或者文件夹";
+        alert.messageText = [NSString stringWithFormat:@"请选择%@文件路径", errorStr];
+        alert.informativeText = @"ncm可以是文件或者文件夹, exprot只能是文件夹";
         [alert setAlertStyle:NSAlertStyleWarning];
         [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse returnCode) {
-            
         }];
         return;
     }
+    
+    /** 执行转换操作 */
     [JRNcmDumpTool dumpNcmFiles:[_files copy] exportPath:_exportPath];
+}
+
+- (IBAction)isSaveTheNcmFilePathAction:(id)sender {
+    [JRSavePathTool share].saveNcmFilePath = self.numFilePathBtn.state;
+}
+
+- (IBAction)isSaveExportPathAction:(id)sender {
+    [JRSavePathTool share].saveExportPath = self.exportPathBtn.state;
 }
 @end
