@@ -46,14 +46,15 @@ NSString * _Nonnull exportPathKey = @"exportPath_Key";
     _saveNcmFilePath = [[userDefaults objectForKey:canSaveNcmFilePathKey] boolValue];
     _ncmFilePath = [userDefaults objectForKey:ncmFilePathKey];
     _exportPath = [userDefaults objectForKey:exportPathKey];
-    if (_exportPath > 0) {
-        if (![MMFileUtility directoryExist:_exportPath]) {
-            NSString *logStr = nil;
-            [MMFileUtility createFolder:_exportPath errStr:&logStr];
-            if (logStr.length > 0) {
-                NSLog(@"exportPath error %@", logStr);
-                _exportPath = nil;
-            }
+    if (_exportPath.length == 0) {
+        _exportPath = [[NSSearchPathForDirectoriesInDomains(NSMusicDirectory, NSUserDomainMask, YES)objectAtIndex:0] stringByAppendingPathComponent:@"JRNcmDump"];
+    }
+    if (![MMFileUtility directoryExist:_exportPath]) {
+        NSString *logStr = nil;
+        [MMFileUtility createFolder:_exportPath errStr:&logStr];
+        if (logStr.length > 0) {
+            NSLog(@"exportPath error %@", logStr);
+            _exportPath = nil;
         }
     }
 }

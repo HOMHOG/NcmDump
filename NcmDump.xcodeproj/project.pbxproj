@@ -126,10 +126,13 @@
 		05A5A86C21F0625300B7CB1E /* modfilebase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05A5A7F921F0625200B7CB1E /* modfilebase.cpp */; };
 		05A5A86D21F0625300B7CB1E /* modfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05A5A7FA21F0625200B7CB1E /* modfile.cpp */; };
 		05A5A86E21F0625300B7CB1E /* modproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05A5A7FD21F0625200B7CB1E /* modproperties.cpp */; };
+		05BBB21F2251ABEC00F29C6C /* PreferencesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BBB21E2251ABEC00F29C6C /* PreferencesStoryboard.storyboard */; };
+		05BBB2252251AEBF00F29C6C /* JRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB2242251AEBF00F29C6C /* JRSettingViewController.m */; };
+		05BBB2292251B87400F29C6C /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB2272251B87400F29C6C /* MainViewController.mm */; };
+		05BBB22C2251BC2300F29C6C /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB22B2251BC2300F29C6C /* MainWindowController.m */; };
 		05DDE54E21F05F4400FD9DE5 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDE54D21F05F4400FD9DE5 /* libc.tbd */; };
 		05E8EC4021DE0FCB00BCD51C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E8EC3F21DE0FCB00BCD51C /* libc++.tbd */; };
 		05FAEAC521DDBDFE00309829 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FAEAC421DDBDFE00309829 /* AppDelegate.m */; };
-		05FAEAC821DDBDFE00309829 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05FAEAC721DDBDFE00309829 /* ViewController.mm */; };
 		05FAEACA21DDBE0000309829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FAEAC921DDBE0000309829 /* Assets.xcassets */; };
 		05FAEACD21DDBE0000309829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FAEACB21DDBE0000309829 /* Main.storyboard */; };
 		05FAEAD021DDBE0000309829 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FAEACF21DDBE0000309829 /* main.m */; };
@@ -463,13 +466,18 @@
 		05A5A7FC21F0625200B7CB1E /* modtag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modtag.h; sourceTree = "<group>"; };
 		05A5A7FD21F0625200B7CB1E /* modproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = modproperties.cpp; sourceTree = "<group>"; };
 		05A5A7FE21F0625200B7CB1E /* modfilebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modfilebase.h; sourceTree = "<group>"; };
+		05BBB21E2251ABEC00F29C6C /* PreferencesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreferencesStoryboard.storyboard; sourceTree = "<group>"; };
+		05BBB2232251AEBF00F29C6C /* JRSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRSettingViewController.h; sourceTree = "<group>"; };
+		05BBB2242251AEBF00F29C6C /* JRSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRSettingViewController.m; sourceTree = "<group>"; };
+		05BBB2272251B87400F29C6C /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
+		05BBB2282251B87400F29C6C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		05BBB22A2251BC2300F29C6C /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		05BBB22B2251BC2300F29C6C /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		05DDE54D21F05F4400FD9DE5 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
 		05E8EC3F21DE0FCB00BCD51C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		05FAEAC021DDBDFE00309829 /* djrConvert ncm file.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "djrConvert ncm file.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FAEAC321DDBDFE00309829 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		05FAEAC421DDBDFE00309829 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		05FAEAC621DDBDFE00309829 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		05FAEAC721DDBDFE00309829 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		05FAEAC921DDBE0000309829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05FAEACC21DDBE0000309829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05FAEACE21DDBE0000309829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1086,6 +1094,42 @@
 			path = mod;
 			sourceTree = "<group>";
 		};
+		05BBB21A2251AB9300F29C6C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05BBB2262251B87400F29C6C /* Main */,
+				05BBB21B2251ABA900F29C6C /* Preferences */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		05BBB21B2251ABA900F29C6C /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				05BBB2222251AEAC00F29C6C /* Setting */,
+				05BBB21E2251ABEC00F29C6C /* PreferencesStoryboard.storyboard */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		05BBB2222251AEAC00F29C6C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				05BBB2232251AEBF00F29C6C /* JRSettingViewController.h */,
+				05BBB2242251AEBF00F29C6C /* JRSettingViewController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		05BBB2262251B87400F29C6C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				05BBB2272251B87400F29C6C /* MainViewController.mm */,
+				05BBB2282251B87400F29C6C /* MainViewController.h */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		05FAEAB721DDBDFE00309829 = {
 			isa = PBXGroup;
 			children = (
@@ -1106,16 +1150,17 @@
 		05FAEAC221DDBDFE00309829 /* NcmDump */ = {
 			isa = PBXGroup;
 			children = (
+				05BBB21A2251AB9300F29C6C /* ViewController */,
 				050809FC21DDD7FF00A32565 /* Class */,
 				05FAEAC321DDBDFE00309829 /* AppDelegate.h */,
 				05FAEAC421DDBDFE00309829 /* AppDelegate.m */,
-				05FAEAC621DDBDFE00309829 /* ViewController.h */,
-				05FAEAC721DDBDFE00309829 /* ViewController.mm */,
 				05FAEAC921DDBE0000309829 /* Assets.xcassets */,
 				05FAEACB21DDBE0000309829 /* Main.storyboard */,
 				05FAEACE21DDBE0000309829 /* Info.plist */,
 				05FAEACF21DDBE0000309829 /* main.m */,
 				05FAEAD121DDBE0000309829 /* NcmDump.entitlements */,
+				05BBB22A2251BC2300F29C6C /* MainWindowController.h */,
+				05BBB22B2251BC2300F29C6C /* MainWindowController.m */,
 			);
 			path = NcmDump;
 			sourceTree = "<group>";
@@ -1207,6 +1252,7 @@
 				05A5A81A21F0625300B7CB1E /* id3v2.4.0-structure.txt in Resources */,
 				05FAEACA21DDBE0000309829 /* Assets.xcassets in Resources */,
 				05A5A84C21F0625300B7CB1E /* taglib_config.h.cmake in Resources */,
+				05BBB21F2251ABEC00F29C6C /* PreferencesStoryboard.storyboard in Resources */,
 				05A5A83021F0625300B7CB1E /* id3v2.3.0.txt in Resources */,
 				05A5A81B21F0625300B7CB1E /* id3v2.2.0.txt in Resources */,
 				05A5A83421F0625300B7CB1E /* id3v2.4.0-frames.txt in Resources */,
@@ -1222,15 +1268,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BBB22C2251BC2300F29C6C /* MainWindowController.m in Sources */,
 				05080A0521DDE31C00A32565 /* MMFileUtility.m in Sources */,
 				05A5A83521F0625300B7CB1E /* mpegheader.cpp in Sources */,
 				05A5A84421F0625300B7CB1E /* flacmetadatablock.cpp in Sources */,
-				05FAEAC821DDBDFE00309829 /* ViewController.mm in Sources */,
 				05A5A84621F0625300B7CB1E /* flacpicture.cpp in Sources */,
 				05A5A82C21F0625300B7CB1E /* textidentificationframe.cpp in Sources */,
 				05A5A86421F0625300B7CB1E /* tpropertymap.cpp in Sources */,
 				05A5A86C21F0625300B7CB1E /* modfilebase.cpp in Sources */,
 				05A5A83321F0625300B7CB1E /* id3v2tag.cpp in Sources */,
+				05BBB2292251B87400F29C6C /* MainViewController.mm in Sources */,
 				05A5A85A21F0625300B7CB1E /* xmproperties.cpp in Sources */,
 				05A5A80D21F0625300B7CB1E /* oggpage.cpp in Sources */,
 				05A5A80521F0625300B7CB1E /* vorbisfile.cpp in Sources */,
@@ -1297,6 +1344,7 @@
 				05A5A85221F0625300B7CB1E /* mp4properties.cpp in Sources */,
 				05A5A82521F0625300B7CB1E /* commentsframe.cpp in Sources */,
 				05A5A81421F0625300B7CB1E /* apefooter.cpp in Sources */,
+				05BBB2252251AEBF00F29C6C /* JRSettingViewController.m in Sources */,
 				053D82BD2202F45F00DE4FF4 /* ncmcrypt.cpp in Sources */,
 				05A5A85321F0625300B7CB1E /* asfpicture.cpp in Sources */,
 				05A5A85721F0625300B7CB1E /* asffile.cpp in Sources */,

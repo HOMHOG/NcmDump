@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  NcmDump
 //
 //  Created by 丁嘉睿 on 2019/1/3.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
+@interface MainViewController : NSViewController
 
 
 @end
