@@ -18,6 +18,8 @@
 	<string>1.4</string>
 	<key>CFBundleVersion</key>
 	<string>1.4.2</string>
+	<key>JRUpdateURL</key>
+	<string>http://ppbj1cq4j.bkt.clouddn.com/JRNcm.plist</string>
 	<key>LSApplicationCategoryType</key>
 	<dict/>
 	<key>LSMinimumSystemVersion</key>

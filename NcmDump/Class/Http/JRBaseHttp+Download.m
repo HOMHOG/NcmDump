@@ -17,7 +17,8 @@
     if ([MMFileUtility directoryExist:cachePath]) {
         [MMFileUtility createFolder:cachePath errStr:nil];
     }
-    [[JRBaseHttp shareHttp] httpDownLoadURL:@"http://ppbj1cq4j.bkt.clouddn.com/JRNcm.plist" filePath:cachePath complete:^(NSError * _Nullable error, NSURL * _Nullable filePath) {
+    NSString *updateUrlString = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"JRUpdateURL"];
+    [[JRBaseHttp shareHttp] httpDownLoadURL:updateUrlString filePath:cachePath complete:^(NSError * _Nullable error, NSURL * _Nullable filePath) {
         if (completeBlock) {
             completeBlock(error, filePath);
         }
