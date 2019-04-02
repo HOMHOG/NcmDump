@@ -13,6 +13,8 @@
 
 @property (weak) IBOutlet NSButton *exportPathBtn;
 
+@property (weak) IBOutlet NSButton *autoUpdateBtn;
+
 @end
 
 @implementation JRSettingViewController
@@ -20,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+    self.autoUpdateBtn.state = [JRSavePathTool share].autoUpdate;
     [_exportPathBtn setTitle:[JRSavePathTool share].exportPath];
 }
 
@@ -41,6 +44,9 @@
     }];
 }
 
+- (IBAction)_autoUpdateAppAction:(id)sender {
+    [JRSavePathTool share].autoUpdate = self.autoUpdateBtn.state;
+}
 
 
 @end

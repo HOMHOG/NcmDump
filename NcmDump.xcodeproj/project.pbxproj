@@ -129,9 +129,14 @@
 		05BBB21F2251ABEC00F29C6C /* PreferencesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BBB21E2251ABEC00F29C6C /* PreferencesStoryboard.storyboard */; };
 		05BBB2252251AEBF00F29C6C /* JRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB2242251AEBF00F29C6C /* JRSettingViewController.m */; };
 		05BBB2292251B87400F29C6C /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB2272251B87400F29C6C /* MainViewController.mm */; };
-		05BBB22C2251BC2300F29C6C /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB22B2251BC2300F29C6C /* MainWindowController.m */; };
+		05C0E8CB22533029006E9550 /* ClientInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0E8CA22533029006E9550 /* ClientInformation.m */; };
+		05C0E8CE2253315F006E9550 /* JRBaseHttp+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0E8CD2253315F006E9550 /* JRBaseHttp+Download.m */; };
+		05C0E8D22253363F006E9550 /* MMPlistUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0E8D02253363F006E9550 /* MMPlistUtility.m */; };
+		05C0E8E222533677006E9550 /* NSString+MMFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0E8DD22533677006E9550 /* NSString+MMFile.m */; };
+		05C0E8F222534558006E9550 /* UpdateVersionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C0E8F122534558006E9550 /* UpdateVersionStoryboard.storyboard */; };
 		05DDE54E21F05F4400FD9DE5 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDE54D21F05F4400FD9DE5 /* libc.tbd */; };
 		05E8EC4021DE0FCB00BCD51C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E8EC3F21DE0FCB00BCD51C /* libc++.tbd */; };
+		05EABC832252099100D76B2A /* JRBaseHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EABC822252099100D76B2A /* JRBaseHttp.m */; };
 		05FAEAC521DDBDFE00309829 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FAEAC421DDBDFE00309829 /* AppDelegate.m */; };
 		05FAEACA21DDBE0000309829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FAEAC921DDBE0000309829 /* Assets.xcassets */; };
 		05FAEACD21DDBE0000309829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FAEACB21DDBE0000309829 /* Main.storyboard */; };
@@ -471,10 +476,19 @@
 		05BBB2242251AEBF00F29C6C /* JRSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRSettingViewController.m; sourceTree = "<group>"; };
 		05BBB2272251B87400F29C6C /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
 		05BBB2282251B87400F29C6C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		05BBB22A2251BC2300F29C6C /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
-		05BBB22B2251BC2300F29C6C /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		05C0E8C922533029006E9550 /* ClientInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientInformation.h; sourceTree = "<group>"; };
+		05C0E8CA22533029006E9550 /* ClientInformation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientInformation.m; sourceTree = "<group>"; };
+		05C0E8CC2253315F006E9550 /* JRBaseHttp+Download.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JRBaseHttp+Download.h"; sourceTree = "<group>"; };
+		05C0E8CD2253315F006E9550 /* JRBaseHttp+Download.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JRBaseHttp+Download.m"; sourceTree = "<group>"; };
+		05C0E8D02253363F006E9550 /* MMPlistUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPlistUtility.m; sourceTree = "<group>"; };
+		05C0E8D12253363F006E9550 /* MMPlistUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPlistUtility.h; sourceTree = "<group>"; };
+		05C0E8D822533677006E9550 /* NSString+MMFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MMFile.h"; sourceTree = "<group>"; };
+		05C0E8DD22533677006E9550 /* NSString+MMFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MMFile.m"; sourceTree = "<group>"; };
+		05C0E8F122534558006E9550 /* UpdateVersionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateVersionStoryboard.storyboard; sourceTree = "<group>"; };
 		05DDE54D21F05F4400FD9DE5 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
 		05E8EC3F21DE0FCB00BCD51C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		05EABC812252099100D76B2A /* JRBaseHttp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRBaseHttp.h; sourceTree = "<group>"; };
+		05EABC822252099100D76B2A /* JRBaseHttp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRBaseHttp.m; sourceTree = "<group>"; };
 		05FAEAC021DDBDFE00309829 /* djrConvert ncm file.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "djrConvert ncm file.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FAEAC321DDBDFE00309829 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		05FAEAC421DDBDFE00309829 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -485,6 +499,7 @@
 		05FAEAD121DDBE0000309829 /* NcmDump.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NcmDump.entitlements; sourceTree = "<group>"; };
 		05FE211A21DE058400D8BC9F /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
 		05FE211B21DE058400D8BC9F /* cJSON.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cJSON.cpp; sourceTree = "<group>"; };
+		AE2995525B575A0D9438A9E5 /* libPods-NcmDump.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NcmDump.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,11 +521,11 @@
 		050809FC21DDD7FF00A32565 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				05C0E8C82253301F006E9550 /* ClientInformation */,
+				05EABC802252097400D76B2A /* Http */,
 				0510DD83221A628F00298A42 /* Save */,
 				0542EAC721F02BCA00A160AC /* Core */,
 				05FE20C621DE04E500D8BC9F /* Verson */,
-				05080A0621DDE35500A32565 /* NSDate */,
-				05080A0121DDE31C00A32565 /* FileUtils */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -560,6 +575,7 @@
 				05DDE54D21F05F4400FD9DE5 /* libc.tbd */,
 				056B5A6E21EEC284009C17D0 /* libc++.1.tbd */,
 				05E8EC3F21DE0FCB00BCD51C /* libc++.tbd */,
+				AE2995525B575A0D9438A9E5 /* libPods-NcmDump.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1097,6 +1113,7 @@
 		05BBB21A2251AB9300F29C6C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				05C0E8F02253452A006E9550 /* Update */,
 				05BBB2262251B87400F29C6C /* Main */,
 				05BBB21B2251ABA900F29C6C /* Preferences */,
 			);
@@ -1130,6 +1147,52 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		05C0E8C82253301F006E9550 /* ClientInformation */ = {
+			isa = PBXGroup;
+			children = (
+				05C0E8C922533029006E9550 /* ClientInformation.h */,
+				05C0E8CA22533029006E9550 /* ClientInformation.m */,
+			);
+			path = ClientInformation;
+			sourceTree = "<group>";
+		};
+		05C0E8CF2253363F006E9550 /* PlistUtils */ = {
+			isa = PBXGroup;
+			children = (
+				05C0E8D02253363F006E9550 /* MMPlistUtility.m */,
+				05C0E8D12253363F006E9550 /* MMPlistUtility.h */,
+			);
+			path = PlistUtils;
+			sourceTree = "<group>";
+		};
+		05C0E8D322533677006E9550 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				05C0E8D822533677006E9550 /* NSString+MMFile.h */,
+				05C0E8DD22533677006E9550 /* NSString+MMFile.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		05C0E8F02253452A006E9550 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				05C0E8F122534558006E9550 /* UpdateVersionStoryboard.storyboard */,
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
+		05EABC802252097400D76B2A /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				05EABC812252099100D76B2A /* JRBaseHttp.h */,
+				05EABC822252099100D76B2A /* JRBaseHttp.m */,
+				05C0E8CC2253315F006E9550 /* JRBaseHttp+Download.h */,
+				05C0E8CD2253315F006E9550 /* JRBaseHttp+Download.m */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
 		05FAEAB721DDBDFE00309829 = {
 			isa = PBXGroup;
 			children = (
@@ -1159,8 +1222,6 @@
 				05FAEACE21DDBE0000309829 /* Info.plist */,
 				05FAEACF21DDBE0000309829 /* main.m */,
 				05FAEAD121DDBE0000309829 /* NcmDump.entitlements */,
-				05BBB22A2251BC2300F29C6C /* MainWindowController.h */,
-				05BBB22B2251BC2300F29C6C /* MainWindowController.m */,
 			);
 			path = NcmDump;
 			sourceTree = "<group>";
@@ -1168,6 +1229,10 @@
 		05FE20C621DE04E500D8BC9F /* Verson */ = {
 			isa = PBXGroup;
 			children = (
+				05080A0621DDE35500A32565 /* NSDate */,
+				05080A0121DDE31C00A32565 /* FileUtils */,
+				05C0E8D322533677006E9550 /* NSString */,
+				05C0E8CF2253363F006E9550 /* PlistUtils */,
 				053D82B72202F45E00DE4FF4 /* ncmcrypt */,
 				05A5A70621F0625200B7CB1E /* taglib */,
 				0542EA7621F02B1900A160AC /* OpenSSL */,
@@ -1254,6 +1319,7 @@
 				05A5A84C21F0625300B7CB1E /* taglib_config.h.cmake in Resources */,
 				05BBB21F2251ABEC00F29C6C /* PreferencesStoryboard.storyboard in Resources */,
 				05A5A83021F0625300B7CB1E /* id3v2.3.0.txt in Resources */,
+				05C0E8F222534558006E9550 /* UpdateVersionStoryboard.storyboard in Resources */,
 				05A5A81B21F0625300B7CB1E /* id3v2.2.0.txt in Resources */,
 				05A5A83421F0625300B7CB1E /* id3v2.4.0-frames.txt in Resources */,
 				05FAEACD21DDBE0000309829 /* Main.storyboard in Resources */,
@@ -1268,18 +1334,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05BBB22C2251BC2300F29C6C /* MainWindowController.m in Sources */,
 				05080A0521DDE31C00A32565 /* MMFileUtility.m in Sources */,
 				05A5A83521F0625300B7CB1E /* mpegheader.cpp in Sources */,
 				05A5A84421F0625300B7CB1E /* flacmetadatablock.cpp in Sources */,
 				05A5A84621F0625300B7CB1E /* flacpicture.cpp in Sources */,
 				05A5A82C21F0625300B7CB1E /* textidentificationframe.cpp in Sources */,
+				05EABC832252099100D76B2A /* JRBaseHttp.m in Sources */,
 				05A5A86421F0625300B7CB1E /* tpropertymap.cpp in Sources */,
 				05A5A86C21F0625300B7CB1E /* modfilebase.cpp in Sources */,
 				05A5A83321F0625300B7CB1E /* id3v2tag.cpp in Sources */,
 				05BBB2292251B87400F29C6C /* MainViewController.mm in Sources */,
 				05A5A85A21F0625300B7CB1E /* xmproperties.cpp in Sources */,
 				05A5A80D21F0625300B7CB1E /* oggpage.cpp in Sources */,
+				05C0E8E222533677006E9550 /* NSString+MMFile.m in Sources */,
 				05A5A80521F0625300B7CB1E /* vorbisfile.cpp in Sources */,
 				05A5A82021F0625300B7CB1E /* privateframe.cpp in Sources */,
 				05A5A83B21F0625300B7CB1E /* wavfile.cpp in Sources */,
@@ -1307,6 +1374,7 @@
 				05A5A81521F0625300B7CB1E /* apetag.cpp in Sources */,
 				05A5A82F21F0625300B7CB1E /* id3v2synchdata.cpp in Sources */,
 				05A5A83C21F0625300B7CB1E /* wavproperties.cpp in Sources */,
+				05C0E8CB22533029006E9550 /* ClientInformation.m in Sources */,
 				05A5A86A21F0625300B7CB1E /* tzlib.cpp in Sources */,
 				05A5A85F21F0625300B7CB1E /* tdebuglistener.cpp in Sources */,
 				05A5A84921F0625300B7CB1E /* mpcproperties.cpp in Sources */,
@@ -1356,6 +1424,7 @@
 				05A5A81F21F0625300B7CB1E /* uniquefileidentifierframe.cpp in Sources */,
 				05A5A80621F0625300B7CB1E /* vorbisproperties.cpp in Sources */,
 				05A5A86021F0625300B7CB1E /* tfile.cpp in Sources */,
+				05C0E8CE2253315F006E9550 /* JRBaseHttp+Download.m in Sources */,
 				05A5A82121F0625300B7CB1E /* unknownframe.cpp in Sources */,
 				05A5A86221F0625300B7CB1E /* tstring.cpp in Sources */,
 				05A5A82221F0625300B7CB1E /* eventtimingcodesframe.cpp in Sources */,
@@ -1371,6 +1440,7 @@
 				05A5A7FF21F0625300B7CB1E /* wavpackfile.cpp in Sources */,
 				05A5A84021F0625300B7CB1E /* itfile.cpp in Sources */,
 				0542EACB21F02BCA00A160AC /* JRNcmDumpTool.mm in Sources */,
+				05C0E8D22253363F006E9550 /* MMPlistUtility.m in Sources */,
 				05A5A85021F0625300B7CB1E /* mp4atom.cpp in Sources */,
 				05A5A86821F0625300B7CB1E /* unicode.cpp in Sources */,
 				05A5A85821F0625300B7CB1E /* tagunion.cpp in Sources */,

@@ -19,6 +19,10 @@ NSString * _Nonnull ncmFilePathKey = @"ncmFilePath_Key";
 
 NSString * _Nonnull exportPathKey = @"exportPath_Key";
 
+NSString * _Nonnull cachetPathKey = @"cachetPath_Key";
+
+NSString * _Nonnull autoUpdateKey = @"autoUpdate_Key";
+
 @implementation JRSavePathTool
 
 + (instancetype)share
@@ -46,9 +50,30 @@ NSString * _Nonnull exportPathKey = @"exportPath_Key";
     _saveNcmFilePath = [[userDefaults objectForKey:canSaveNcmFilePathKey] boolValue];
     _ncmFilePath = [userDefaults objectForKey:ncmFilePathKey];
     _exportPath = [userDefaults objectForKey:exportPathKey];
-    if (_exportPath.length == 0) {
-        _exportPath = [[NSSearchPathForDirectoriesInDomains(NSMusicDirectory, NSUserDomainMask, YES)objectAtIndex:0] stringByAppendingPathComponent:@"JRNcmDump"];
+    if([userDefaults objectForKey:autoUpdateKey] == nil) {
+        self.autoUpdate = YES;
+    } else {
+        _autoUpdate = [[userDefaults objectForKey:autoUpdateKey] boolValue];
     }
+    if (_exportPath.length == 0) {
+        self.exportPath = [[NSSearchPathForDirectoriesInDomains(NSMusicDirectory, NSUserDomainMask, YES)objectAtIndex:0] stringByAppendingPathComponent:@"JRNcmDump"];
+    }
+    
+    _cachePath = [userDefaults objectForKey:cachetPathKey];
+    if (_cachePath.length == 0) {
+        _cachePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)objectAtIndex:0] stringByAppendingPathComponent:@"JRCache"];
+        [self _toolSynchronize];
+    }
+    
+    if (![MMFileUtility directoryExist:_cachePath]) {
+        NSString *logStr = nil;
+        [MMFileUtility createFolder:_cachePath errStr:&logStr];
+        if (logStr.length > 0) {
+            NSLog(@"exportPath error %@", logStr);
+            _exportPath = nil;
+        }
+    }
+
     if (![MMFileUtility directoryExist:_exportPath]) {
         NSString *logStr = nil;
         [MMFileUtility createFolder:_exportPath errStr:&logStr];
@@ -83,6 +108,11 @@ NSString * _Nonnull exportPathKey = @"exportPath_Key";
     [self _toolSynchronize];
 }
 
+- (void)setAutoUpdate:(BOOL)autoUpdate
+{
+    _autoUpdate = autoUpdate;
+    [self _toolSynchronize];
+}
 
 - (void)_toolSynchronize
 {
@@ -90,6 +120,7 @@ NSString * _Nonnull exportPathKey = @"exportPath_Key";
 
     [userDefaults setObject:@(self.saveExportPath) forKey:canSaveExportPathKey];
     [userDefaults setObject:@(self.saveNcmFilePath) forKey:canSaveNcmFilePathKey];
+    [userDefaults setObject:@(self.autoUpdate) forKey:autoUpdateKey];
 
     if (self.saveNcmFilePath) {
         if (self.ncmFilePath.length > 0) {

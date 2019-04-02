@@ -4,28 +4,18 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            scope = "0"
-            stopOnStyle = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NcmDump/ViewController.mm"
-            timestampString = "572169706.428872"
+            filePath = "NcmDump/Class/Save/JRSavePathTool.m"
+            timestampString = "575883659.095163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "-setAutoUpdate:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NcmDump/MainWindowController.m"
-            timestampString = "575782774.91223"
+            filePath = "NcmDump/Class/Save/JRSavePathTool.m"
+            timestampString = "575883659.095762"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-close"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-_getProperty"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

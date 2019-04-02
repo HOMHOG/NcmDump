@@ -35,18 +35,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKz-tQ-trl">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tKz-tQ-trl">
                                 <rect key="frame" x="18" y="226" width="71" height="22"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="jRL-wP-pZD"/>
+                                    <constraint firstAttribute="width" constant="67" id="vaw-1j-7mk"/>
+                                </constraints>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="输出路径:" id="Cq6-eo-3p7">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5T-Wh-VId">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y5T-Wh-VId">
                                 <rect key="frame" x="89" y="222" width="377" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="/User/djr/ikarose" bezelStyle="rounded" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="h2W-yZ-d7Y">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -55,9 +57,33 @@
                                     <action selector="_selectExportPathAction:" target="xlG-Ja-P9Q" id="bRM-JT-Gvb"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZWT-QG-vYb">
+                                <rect key="frame" x="339" y="18" width="129" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Ykb-Nc-ts3"/>
+                                    <constraint firstAttribute="width" constant="125" id="yCJ-TZ-4fa"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="自动检查新版本" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="5w7-1d-PPA">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="_autoUpdateAppAction:" target="xlG-Ja-P9Q" id="Mg1-j9-Ofi"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="tKz-tQ-trl" firstAttribute="top" secondItem="oIK-vE-gDc" secondAttribute="top" constant="22" id="8GH-Dz-OUs"/>
+                            <constraint firstAttribute="trailing" secondItem="ZWT-QG-vYb" secondAttribute="trailing" constant="14" id="GK0-Cb-1Qf"/>
+                            <constraint firstItem="Y5T-Wh-VId" firstAttribute="top" secondItem="oIK-vE-gDc" secondAttribute="top" constant="20" symbolic="YES" id="Sdi-W5-9cl"/>
+                            <constraint firstAttribute="trailing" secondItem="Y5T-Wh-VId" secondAttribute="trailing" constant="20" symbolic="YES" id="ao4-dg-XK3"/>
+                            <constraint firstItem="tKz-tQ-trl" firstAttribute="leading" secondItem="oIK-vE-gDc" secondAttribute="leading" constant="20" symbolic="YES" id="asn-3p-0t8"/>
+                            <constraint firstItem="Y5T-Wh-VId" firstAttribute="leading" secondItem="tKz-tQ-trl" secondAttribute="trailing" constant="8" symbolic="YES" id="gCK-Z5-Uj5"/>
+                            <constraint firstAttribute="bottom" secondItem="ZWT-QG-vYb" secondAttribute="bottom" constant="20" symbolic="YES" id="o57-LG-Ogx"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="autoUpdateBtn" destination="ZWT-QG-vYb" id="F4I-9O-zoG"/>
                         <outlet property="exportPathBtn" destination="Y5T-Wh-VId" id="hnh-8q-BJE"/>
                     </connections>
                 </viewController>

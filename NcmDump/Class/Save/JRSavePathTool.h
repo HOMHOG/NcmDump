@@ -23,6 +23,10 @@ extern NSString * _Nonnull const  jr_dumpPathName;
 
 @property (copy, nonatomic) NSString *ncmFilePath;
 
+@property (readonly, nonatomic) NSString *cachePath;
+
+@property (assign, nonatomic) BOOL autoUpdate;
+
 + (instancetype)share;
 
 @end

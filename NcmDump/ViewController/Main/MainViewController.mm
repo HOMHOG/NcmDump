@@ -10,6 +10,8 @@
 #import "MMFileUtility.h"
 #import "JRNcmDumpTool.h"
 #import "JRSavePathTool.h"
+#import "ClientInformation.h"
+#import "JRBaseHttp.h"
 
 NSString *const jr_pathExtension = @"ncm";
 
@@ -29,7 +31,6 @@ NSString *const jr_pathExtension = @"ncm";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
     self.numFilePathBtn.state = [JRSavePathTool share].saveNcmFilePath;
     
     // Do any additional setup after loading the view.
@@ -44,8 +45,50 @@ NSString *const jr_pathExtension = @"ncm";
     }
     _ncmPathLab.stringValue = ncmFilePath;
     
+    if ([JRSavePathTool share].autoUpdate) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(readyToReadPlist) name:ClientInformationNotificationCenterForDownloadUpdateFileKey object:nil];
+    }
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)readyToReadPlist
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"取消"];
+        [alert addButtonWithTitle:@"更新"];
+        alert.messageText = @"有新版本更新，安装包会放在转换目录（懒了不做下载界面了）";
+        [alert setAlertStyle:NSAlertStyleWarning];
+        [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse returnCode) {
+            if (returnCode == 1001) {
+                [[JRBaseHttp shareHttp] httpDownLoadURL:[ClientInformation updateVersionUrlStrong] filePath:[[JRSavePathTool share] exportPath] complete:^(NSError * _Nullable error, NSURL * _Nullable filePath) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self _showUpdateError:error filePtah:filePath.path];
+                    });
+                }];
+            }
+        }];
+    });
+}
+
+- (void)_showUpdateError:(NSError *)error filePtah:(NSString *)filePath
+{
+    NSAlert *alert = [[NSAlert alloc] init];
+    NSString *str = @"下载成功";
+    if (error) {
+        str = @"下载失败";
+    } else {
+        alert.informativeText = [NSString stringWithFormat:@"安装包路径:%@", filePath];
+    }
+    alert.messageText = str;
+    [alert setAlertStyle:NSAlertStyleWarning];
+    [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse returnCode) {
+    }];
+}
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
