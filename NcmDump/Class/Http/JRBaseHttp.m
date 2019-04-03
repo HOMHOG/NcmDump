@@ -47,6 +47,9 @@
                     a = [a stringByAppendingPathComponent:filename];
                 }
             }
+            if ([fm fileExistsAtPath:a]) {
+                [fm removeItemAtPath:a error:nil];
+            }
             [fm moveItemAtURL:location toURL:[NSURL fileURLWithPath:a] error:nil];
         }
         if (completeBlock) {
