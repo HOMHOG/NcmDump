@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.4</string>
 	<key>CFBundleVersion</key>
-	<string>1.4.4</string>
+	<string>1.4.5</string>
 	<key>JRUpdateURL</key>
 	<string>http://mikunx.b0.upaiyun.com/dingjr/JRNcm.plist</string>
 	<key>LSApplicationCategoryType</key>

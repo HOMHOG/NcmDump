@@ -150,6 +150,8 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="480" height="270"/>
+                        <value key="maxSize" type="size" width="480" height="270"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -170,13 +172,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="250"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjf-n2-SoE">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="MainBackground" id="AUy-Ru-GFj"/>
+                            </imageView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="067-iY-6gz">
-                                <rect key="frame" x="14" y="162" width="139" height="32"/>
+                                <rect key="frame" x="87" y="211" width="389" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="As0-Gm-XwP"/>
-                                    <constraint firstAttribute="width" constant="127" id="Qw9-hp-2rK"/>
+                                    <constraint firstAttribute="height" constant="21" id="j5h-fL-P8O"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="ncm文件路径" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E3G-K9-DsA">
+                                <buttonCell key="cell" type="push" title="Select Ncm file" bezelStyle="rounded" alignment="left" borderStyle="border" inset="2" id="E3G-K9-DsA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -184,36 +190,10 @@
                                     <action selector="selectMusicPathButtonAction:" target="XfG-lQ-9wD" id="xU5-ek-0LE"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NbV-cU-D7a">
-                                <rect key="frame" x="132" y="23" width="217" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="205" id="Zpx-Id-hdl"/>
-                                    <constraint firstAttribute="height" constant="21" id="gaE-lf-mlF"/>
-                                </constraints>
-                                <buttonCell key="cell" type="push" title="开始转换" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kEF-gx-rTx">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="startNcmDumpButtonAction:" target="XfG-lQ-9wD" id="Dnh-EB-164"/>
-                                </connections>
-                            </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5fu-T7-nkL">
-                                <rect key="frame" x="20" y="205" width="440" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="b0e-QY-nqP"/>
-                                </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" borderStyle="border" id="0Tl-km-O17">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sOY-1Z-DP9">
-                                <rect key="frame" x="165" y="171" width="102" height="18"/>
+                                <rect key="frame" x="370" y="197" width="102" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="Afn-gG-tnY"/>
-                                    <constraint firstAttribute="width" constant="98" id="MeD-jh-vQc"/>
+                                    <constraint firstAttribute="height" constant="14" id="72W-pP-a5H"/>
                                 </constraints>
                                 <buttonCell key="cell" type="check" title="是否保存路径" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="xGc-Kb-Zh0">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -223,22 +203,44 @@
                                     <action selector="isSaveTheNcmFilePathAction:" target="XfG-lQ-9wD" id="9cz-cm-Bze"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f8Z-o2-BPx">
+                                <rect key="frame" x="8" y="216" width="82" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="zOJ-AW-NFI"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="输入路径:" id="iyB-cJ-qPD">
+                                    <font key="font" metaFont="system" size="17"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NbV-cU-D7a">
+                                <rect key="frame" x="193" y="13" width="94" height="32"/>
+                                <buttonCell key="cell" type="push" title="开始转换" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kEF-gx-rTx">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="startNcmDumpButtonAction:" target="XfG-lQ-9wD" id="Dnh-EB-164"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="sOY-1Z-DP9" firstAttribute="leading" secondItem="067-iY-6gz" secondAttribute="trailing" constant="20" id="ATH-mP-B8L"/>
-                            <constraint firstItem="NbV-cU-D7a" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="C4z-au-3HB"/>
-                            <constraint firstItem="067-iY-6gz" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Qdr-Et-MWO"/>
-                            <constraint firstAttribute="bottom" secondItem="NbV-cU-D7a" secondAttribute="bottom" constant="30" id="TeC-wS-W7o"/>
-                            <constraint firstItem="5fu-T7-nkL" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Yym-jr-eFJ"/>
-                            <constraint firstItem="067-iY-6gz" firstAttribute="top" secondItem="5fu-T7-nkL" secondAttribute="bottom" constant="15" id="d2o-Zc-cjx"/>
-                            <constraint firstItem="5fu-T7-nkL" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="dSP-Tb-pzj"/>
-                            <constraint firstAttribute="trailing" secondItem="5fu-T7-nkL" secondAttribute="trailing" constant="20" id="nqB-ci-QFp"/>
-                            <constraint firstItem="sOY-1Z-DP9" firstAttribute="centerY" secondItem="067-iY-6gz" secondAttribute="centerY" id="nsB-7q-raE"/>
+                            <constraint firstItem="f8Z-o2-BPx" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="7z4-Mt-nnX"/>
+                            <constraint firstAttribute="trailing" secondItem="067-iY-6gz" secondAttribute="trailing" constant="10" id="Gu5-Dn-LP9"/>
+                            <constraint firstItem="sOY-1Z-DP9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Iik-g0-vuM"/>
+                            <constraint firstItem="sOY-1Z-DP9" firstAttribute="top" secondItem="067-iY-6gz" secondAttribute="bottom" constant="5" id="LMy-IK-SMc"/>
+                            <constraint firstAttribute="bottom" secondItem="NbV-cU-D7a" secondAttribute="bottom" constant="20" symbolic="YES" id="ROc-NL-LSZ"/>
+                            <constraint firstAttribute="trailing" secondItem="sOY-1Z-DP9" secondAttribute="trailing" constant="10" id="Tqa-j8-pKs"/>
+                            <constraint firstItem="067-iY-6gz" firstAttribute="centerY" secondItem="f8Z-o2-BPx" secondAttribute="centerY" id="iEN-UM-mRN"/>
+                            <constraint firstItem="NbV-cU-D7a" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="qh8-eN-lfP"/>
+                            <constraint firstItem="f8Z-o2-BPx" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="vPC-cx-8UC"/>
+                            <constraint firstItem="067-iY-6gz" firstAttribute="leading" secondItem="f8Z-o2-BPx" secondAttribute="trailing" constant="5" id="yM9-2g-ToW"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ncmPathLab" destination="5fu-T7-nkL" id="hT0-CM-bTL"/>
                         <outlet property="numFilePathBtn" destination="sOY-1Z-DP9" id="Vf2-iW-M8R"/>
+                        <outlet property="selectNcmFileBtn" destination="067-iY-6gz" id="XQo-b2-Yba"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -246,4 +248,7 @@
             <point key="canvasLocation" x="75" y="665"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MainBackground" width="1000" height="580"/>
+    </resources>
 </document>

@@ -19,10 +19,10 @@ NSString *const jr_pathExtension = @"ncm";
 @interface MainViewController ()
 
 @property (strong, nonatomic) NSMutableArray *files;
-
-@property (weak) IBOutlet NSTextField *ncmPathLab;
+/** 是否保存输入路径 */
 @property (weak) IBOutlet NSButton *numFilePathBtn;
-
+/** 选择ncm文件路径按钮 */
+@property (weak) IBOutlet NSButton *selectNcmFileBtn;
 
 @end
 
@@ -31,11 +31,11 @@ NSString *const jr_pathExtension = @"ncm";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Do any additional setup after loading the view.
+
     self.numFilePathBtn.state = [JRSavePathTool share].saveNcmFilePath;
     
-    // Do any additional setup after loading the view.
     _files = @[].mutableCopy;
-    
     
     NSString *ncmFilePath = [JRSavePathTool share].ncmFilePath;
     if (ncmFilePath.length == 0) {
@@ -43,11 +43,13 @@ NSString *const jr_pathExtension = @"ncm";
     } else {
         [_files addObject:ncmFilePath];
     }
-    _ncmPathLab.stringValue = ncmFilePath;
+    [self.selectNcmFileBtn setTitle:ncmFilePath];
     
     if ([JRSavePathTool share].autoUpdate) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(readyToReadPlist) name:ClientInformationNotificationCenterForDownloadUpdateFileKey object:nil];
     }
+    
+    
 }
 
 - (void)dealloc
@@ -121,7 +123,7 @@ NSString *const jr_pathExtension = @"ncm";
                     }
                 }
             }
-            self.ncmPathLab.stringValue = [self.files firstObject];
+            [self.selectNcmFileBtn setTitle:[self.files firstObject]];
             [JRSavePathTool share].ncmFilePath = [self.files firstObject];
         }
     }];

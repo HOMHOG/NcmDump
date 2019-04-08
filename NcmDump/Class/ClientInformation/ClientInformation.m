@@ -12,6 +12,8 @@
 
 static NSDictionary *_clientDic;
 
+static BOOL _isFinish = NO;
+
 NSString const * version_key = @"Version";
 NSString const * UpdateUrl_key = @"UpdateUrl";
 
@@ -22,9 +24,17 @@ NSString * const ClientInformationNotificationCenterForDownloadUpdateFileKey = @
 + (void)start
 {
     [JRBaseHttp downloadAppPlistWithComplete:^(NSError * _Nullable error, NSURL * _Nullable filePath) {
+        _isFinish = YES;
         _clientDic = [MMPlistUtility readDicPlistFile:filePath.path isMutable:NO];
-        [[NSNotificationCenter defaultCenter] postNotificationName:ClientInformationNotificationCenterForDownloadUpdateFileKey object:nil];
+        if ([ClientInformation newVersion]) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:ClientInformationNotificationCenterForDownloadUpdateFileKey object:nil];
+        }
     }];
+}
+
+- (BOOL)isReady
+{
+    return _isFinish;
 }
 
 + (BOOL)newVersion
