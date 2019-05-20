@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		05080A0521DDE31C00A32565 /* MMFileUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 05080A0221DDE31C00A32565 /* MMFileUtility.m */; };
 		05080A0921DDE35500A32565 /* NSDate+MMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 05080A0821DDE35500A32565 /* NSDate+MMCommon.m */; };
+		051EB57F22927DAE005CF076 /* JRMusicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 051EB57E22927DAE005CF076 /* JRMusicInfo.m */; };
+		051EB58322928B4E005CF076 /* JRProgressIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051EB58222928B4E005CF076 /* JRProgressIndicatorViewController.m */; };
 		053D82BD2202F45F00DE4FF4 /* ncmcrypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053D82BB2202F45E00DE4FF4 /* ncmcrypt.cpp */; };
 		053D82BE2202F45F00DE4FF4 /* aes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053D82BC2202F45E00DE4FF4 /* aes.cpp */; };
 		0542EAC521F02B1900A160AC /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0542EA7721F02B1900A160AC /* libcrypto.a */; };
@@ -162,6 +164,10 @@
 		05080A0321DDE31C00A32565 /* MMFileUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFileUtility.h; sourceTree = "<group>"; };
 		05080A0721DDE35500A32565 /* NSDate+MMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MMCommon.h"; sourceTree = "<group>"; };
 		05080A0821DDE35500A32565 /* NSDate+MMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MMCommon.m"; sourceTree = "<group>"; };
+		051EB57D22927DAE005CF076 /* JRMusicInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRMusicInfo.h; sourceTree = "<group>"; };
+		051EB57E22927DAE005CF076 /* JRMusicInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRMusicInfo.m; sourceTree = "<group>"; };
+		051EB58122928B4E005CF076 /* JRProgressIndicatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRProgressIndicatorViewController.h; sourceTree = "<group>"; };
+		051EB58222928B4E005CF076 /* JRProgressIndicatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRProgressIndicatorViewController.m; sourceTree = "<group>"; };
 		053D82B82202F45E00DE4FF4 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
 		053D82B92202F45E00DE4FF4 /* ncmcrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ncmcrypt.h; sourceTree = "<group>"; };
 		053D82BA2202F45E00DE4FF4 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
@@ -526,6 +532,8 @@
 				0510DD83221A628F00298A42 /* Save */,
 				0542EAC721F02BCA00A160AC /* Core */,
 				05FE20C621DE04E500D8BC9F /* Verson */,
+				051EB57D22927DAE005CF076 /* JRMusicInfo.h */,
+				051EB57E22927DAE005CF076 /* JRMusicInfo.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -555,6 +563,15 @@
 				0582C76F221A7C9800323955 /* JRSavePathTool.m */,
 			);
 			path = Save;
+			sourceTree = "<group>";
+		};
+		051EB58022928AF4005CF076 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				051EB58122928B4E005CF076 /* JRProgressIndicatorViewController.h */,
+				051EB58222928B4E005CF076 /* JRProgressIndicatorViewController.m */,
+			);
+			path = Progress;
 			sourceTree = "<group>";
 		};
 		053D82B72202F45E00DE4FF4 /* ncmcrypt */ = {
@@ -1113,6 +1130,7 @@
 		05BBB21A2251AB9300F29C6C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				051EB58022928AF4005CF076 /* Progress */,
 				05C0E8F02253452A006E9550 /* Update */,
 				05BBB2262251B87400F29C6C /* Main */,
 				05BBB21B2251ABA900F29C6C /* Preferences */,
@@ -1399,6 +1417,7 @@
 				05A5A83621F0625300B7CB1E /* xingheader.cpp in Sources */,
 				05A5A82321F0625300B7CB1E /* unsynchronizedlyricsframe.cpp in Sources */,
 				05A5A85921F0625300B7CB1E /* xmfile.cpp in Sources */,
+				051EB57F22927DAE005CF076 /* JRMusicInfo.m in Sources */,
 				05A5A80821F0625300B7CB1E /* opusfile.cpp in Sources */,
 				05A5A86E21F0625300B7CB1E /* modproperties.cpp in Sources */,
 				05A5A80321F0625300B7CB1E /* fileref.cpp in Sources */,
@@ -1448,6 +1467,7 @@
 				05A5A84221F0625300B7CB1E /* audioproperties.cpp in Sources */,
 				05A5A82721F0625300B7CB1E /* tableofcontentsframe.cpp in Sources */,
 				05A5A80C21F0625300B7CB1E /* xiphcomment.cpp in Sources */,
+				051EB58322928B4E005CF076 /* JRProgressIndicatorViewController.m in Sources */,
 				05080A0921DDE35500A32565 /* NSDate+MMCommon.m in Sources */,
 				05A5A84E21F0625300B7CB1E /* mp4file.cpp in Sources */,
 				05A5A80221F0625300B7CB1E /* s3mfile.cpp in Sources */,

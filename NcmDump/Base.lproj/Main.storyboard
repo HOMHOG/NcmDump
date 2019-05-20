@@ -247,6 +247,47 @@
             </objects>
             <point key="canvasLocation" x="75" y="665"/>
         </scene>
+        <!--Progress Indicator View Controller-->
+        <scene sceneID="UU1-cG-6Ih">
+            <objects>
+                <viewController storyboardIdentifier="ProgressViewController" id="OaP-Og-3tQ" customClass="JRProgressIndicatorViewController" sceneMemberID="viewController">
+                    <view key="view" id="MVF-8t-al4">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="81"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <progressIndicator wantsLayer="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="cf1-r0-T4i">
+                                <rect key="frame" x="20" y="30" width="440" height="21"/>
+                            </progressIndicator>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="yba-Gl-5oY">
+                                <rect key="frame" x="151" y="51" width="179" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="LT9-RQ-x1M"/>
+                                    <constraint firstAttribute="width" constant="175" id="Ssu-5n-Kzs"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" alignment="center" title="正在转换中..." id="fmM-Gg-VvK">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cf1-r0-T4i" firstAttribute="centerY" secondItem="MVF-8t-al4" secondAttribute="centerY" id="0BF-RM-MdG"/>
+                            <constraint firstItem="yba-Gl-5oY" firstAttribute="top" secondItem="MVF-8t-al4" secondAttribute="top" constant="8" id="Bg6-7S-4NG"/>
+                            <constraint firstItem="yba-Gl-5oY" firstAttribute="centerX" secondItem="cf1-r0-T4i" secondAttribute="centerX" id="I64-5S-32S"/>
+                            <constraint firstItem="cf1-r0-T4i" firstAttribute="top" secondItem="yba-Gl-5oY" secondAttribute="bottom" constant="1" id="J1y-Wz-mrp"/>
+                            <constraint firstItem="cf1-r0-T4i" firstAttribute="leading" secondItem="MVF-8t-al4" secondAttribute="leading" constant="20" symbolic="YES" id="jzC-eY-CCG"/>
+                            <constraint firstAttribute="trailing" secondItem="cf1-r0-T4i" secondAttribute="trailing" constant="20" symbolic="YES" id="vNi-pg-7h9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ProgressIndicator" destination="cf1-r0-T4i" id="Vka-y8-btM"/>
+                    </connections>
+                </viewController>
+                <customObject id="fxk-cZ-at6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="952.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MainBackground" width="1000" height="580"/>

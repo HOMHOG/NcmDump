@@ -16,7 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSString *exportPath;
 
-+ (void)dumpNcmFiles:(NSArray *)ncmFiles exportPath:(NSString *)exportPath;
++ (void)dumpNcmFiles:(nullable NSArray *)ncmFiles exportPath:(nullable NSString *)exportPath;
+
++ (void)dumpNcmFiles:(nullable NSArray *)ncmFiles exportPath:(nullable NSString *)exportPath dumpProgressBlock:(nullable void(^)(CGFloat progress))dumpProgressBlock failureBlock:(nullable void(^)(NSError *error))failureBlock;
 
 @end
 

@@ -12,6 +12,7 @@
 #import "JRSavePathTool.h"
 #import "ClientInformation.h"
 #import "JRBaseHttp.h"
+#import "JRProgressIndicatorViewController.h"
 
 NSString *const jr_pathExtension = @"ncm";
 
@@ -130,6 +131,7 @@ NSString *const jr_pathExtension = @"ncm";
 }
 
 - (IBAction)startNcmDumpButtonAction:(id)sender {
+    
     BOOL isError = NO;
     NSString *errorStr = @"请选择需要转换文件的路径";
     if (self.files.count == 0) {
@@ -150,8 +152,26 @@ NSString *const jr_pathExtension = @"ncm";
         }];
         return;
     }
+    
+    NSArray *reslut = [_files copy];
+    NSStoryboard * storyBoard = nil;
+    if (@available(macOS 10.13, *)) {
+        storyBoard = [NSStoryboard mainStoryboard];
+    } else {
+        // Fallback on earlier versions
+        storyBoard = [NSStoryboard storyboardWithName:@"Main" bundle:nil]; //获取故事板的引用
+    }
+    __block JRProgressIndicatorViewController *vc = [storyBoard instantiateControllerWithIdentifier:@"ProgressViewController"];
+    vc.minValue = 0;
+    vc.maxValue = reslut.count;
+    [self presentViewControllerAsSheet:vc];
+    
     /** 执行转换操作 */
-    [JRNcmDumpTool dumpNcmFiles:[_files copy] exportPath:[JRSavePathTool share].exportPath];
+    [JRNcmDumpTool dumpNcmFiles:reslut exportPath:[JRSavePathTool share].exportPath dumpProgressBlock:^(CGFloat progress) {
+        [vc setProgress:progress];
+    } failureBlock:^(NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (IBAction)isSaveTheNcmFilePathAction:(id)sender {
