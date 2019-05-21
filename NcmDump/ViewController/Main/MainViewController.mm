@@ -124,8 +124,12 @@ NSString *const jr_pathExtension = @"ncm";
                     }
                 }
             }
-            [self.selectNcmFileBtn setTitle:[self.files firstObject]];
-            [JRSavePathTool share].ncmFilePath = [self.files firstObject];
+            if (self.files.count > 0) {
+                [self.selectNcmFileBtn setTitle:[self.files firstObject]];
+                [JRSavePathTool share].ncmFilePath = [self.files firstObject];
+            } else {
+                [self.selectNcmFileBtn setTitle:@"检索不到后缀为ncm文件，请重新选择"];
+            }
         }
     }];
 }
