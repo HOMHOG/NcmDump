@@ -1295,7 +1295,7 @@
 		05FAEAB821DDBDFE00309829 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "丁嘉睿";
 				TargetAttributes = {
 					05FAEABF21DDBDFE00309829 = {
@@ -1606,8 +1606,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NcmDump/NcmDump.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.4.7;
 				DEVELOPMENT_TEAM = 575VY4WYAM;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/NcmDump/Class/Verson/OpenSSL";
@@ -1621,6 +1623,7 @@
 					"$(PROJECT_DIR)/NcmDump/Class/Verson/OpenSSL",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = Miracle.NcmDump;
 				PRODUCT_NAME = "djrConvert ncm file";
 			};
@@ -1631,8 +1634,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NcmDump/NcmDump.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.4.7;
 				DEVELOPMENT_TEAM = 575VY4WYAM;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/NcmDump/Class/Verson/OpenSSL";
@@ -1646,6 +1651,7 @@
 					"$(PROJECT_DIR)/NcmDump/Class/Verson/OpenSSL",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = Miracle.NcmDump;
 				PRODUCT_NAME = "djrConvert ncm file";
 			};
